@@ -1,10 +1,15 @@
+import React, { Component } from "react";
 
+class App extends Component{
+  render(){
+    return(
+      <React.Fragment>
+        <label htmlfor="bar">unnti</label>
+        <input type="text" onChange={()=>{console.log("hi jon")}} />
+      </React.Fragment>
 
-function App() {
-  return (
-    <div><p> unnti and save to reload.</p>
-    </div>
-  );
+    )
+  }
 }
 
 export default App;
