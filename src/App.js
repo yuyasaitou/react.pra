@@ -1,15 +1,32 @@
-import React, { Component } from "react";
+import React from"react";
 
-class App extends Component{
-  render(){
-    return(
-      <React.Fragment>
-        <label htmlfor="bar">unnti</label>
-        <input type="text" onChange={()=>{console.log("hi jon")}} />
-      </React.Fragment>
 
-    )
-  }
+const App = ()=>{
+  const file =[
+    {name:"tanaka",age:10},
+    {name:"hana", age:5},
+    {name:"nani"},
+    {age:5}
+  ]
+  return(
+    <div>
+    {
+      file.map((profile,index) =>{
+        return <User name={profile.name} age={profile.age} key={index} />
+      })
+    }
+  </div>
+  )}
+
+const User =(props) =>{
+  return <div>hi!{props.name} and{props.age}years old</div>
 }
+
+User.defaultProps={
+  age:1,
+  name:"hage"
+}
+
+
 
 export default App;
